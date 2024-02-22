@@ -1,0 +1,54 @@
+site_name: xiaopeng163
+site_author: Peng Xiao
+repo_url: https://github.com/xiaopeng163/mkdocs-blog-template
+repo_name: xiaopeng163/mkdocs-blog-template
+
+theme:
+  name: material
+  custom_dir: overrides
+  icon:
+    logo: material/numeric-9-box
+  features:
+    - content.code.copy
+    - navigation.sections
+    - navigation.instant
+  palette: 
+    - scheme: default
+      toggle:
+        icon: material/theme-light-dark
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/theme-light-dark
+        name: Switch to light mode
+
+plugins:
+  - search
+  - tags
+  - blog:
+      blog_dir: .
+      authors: true
+      post_url_format: "{slug}"
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tilde
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.tabbed: 
+      alternate_style: true
+
+nav:
+  - index.md
